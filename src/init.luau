@@ -4,9 +4,8 @@
 local bytes = require('@dream/bytes')
 local function trimBuffer(source: buffer, length: number): buffer
   if length == buffer.len(source) then return source end
-  local out = buffer.create(length)
-  buffer.copy(out, 0, source, 0, length)
-  return out
+
+  return source[1:length]
 end
 
 @native
@@ -115,7 +114,7 @@ local function lz4Decompress(source: buffer, decompressedSize: number): buffer
         while p<sourceLength do local v=buffer.readu8(source,p); p+=1; literalLength+=v; if v~=255 then break end end
       end
       if literalLength==decompressedSize and p+literalLength==sourceLength then
-        local fast=buffer.create(decompressedSize); if decompressedSize>0 then buffer.copy(fast,0,source,p,decompressedSize) end; return fast
+        return source[p + 1:p + decompressedSize]
       end
     end
   end
