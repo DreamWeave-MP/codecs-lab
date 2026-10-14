@@ -1,0 +1,18 @@
+--!strict
+-- Prints the suite's pins as the package now answers, as the module the suite reads them from,
+-- for when an output was meant to change:
+--   jess run --package . tests/pin.luau > tests/pins.luau
+local codecs = require '@dream/codecs-lab'
+local inputs = require './inputs'
+
+print '--!strict'
+print '-- The digest of each codec output the suite pins, written by pin.luau.'
+print 'return {'
+
+for _, input in inputs.all() do
+  print(`  ['lz4Compress {input.name}'] = '{inputs.digest(codecs.lz4Compress(input.data))}',`)
+  print(`  ['rawStoredDeflate {input.name}'] = '{inputs.digest(codecs.rawStoredDeflate(input.data))}',`)
+  print(`  ['zlibStoredDeflate {input.name}'] = '{inputs.digest(codecs.zlibStoredDeflate(input.data))}',`)
+end
+
+print '}'
