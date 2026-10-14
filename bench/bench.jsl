@@ -1,7 +1,7 @@
 --!strict
 --!native
 -- The lab's codecs, timed through their public API over text a compressor finds runs in and
--- noise it finds none in. Run by `jess run --package . bench/bench.luau [filter]` on a release
+-- noise it finds none in. Run by `jess run --package . bench/bench.jsl [filter]` on a release
 -- build. Prints one line per workload: its name, a tab, and the seconds one call takes. Every
 -- workload's answer is checked against @dream/bytes, before and after it is timed, so a path
 -- that stopped doing the work fails here instead of posting a time.

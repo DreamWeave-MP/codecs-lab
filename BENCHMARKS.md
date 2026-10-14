@@ -4,7 +4,7 @@ Measured on 2026-10-14 on an Intel Core i7-10870H (2.20 GHz, 8 cores), with a ve
 build of Jess at `b12612f` on l3i 2.0.2.
 
 ```sh
-jess run --package <package> <package>/bench/bench.luau [filter]
+jess run --package <package> <package>/bench/bench.jsl [filter]
 ```
 
 Base is `d685040` (the bench's own commit); head is `0cce60d`. Each side ran the whole bench six

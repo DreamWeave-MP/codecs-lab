@@ -5,10 +5,10 @@ id = "org.dreamweave.codecs-lab"
 version = "0.1.0"
 jess_api = "1"
 include = ["src", "README.md"]
-tests = ["tests/run.luau"]
+tests = ["tests/run.jsl"]
 
 [modules]
-"@dream/codecs-lab" = "src/init.luau"
+"@dream/codecs-lab" = "src/init.jsl"
 
 [[layer]]
 id = "org.dreamweave.codecs-lab"

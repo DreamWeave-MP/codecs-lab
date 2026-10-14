@@ -1,5 +1,5 @@
 --!strict
--- The digest of each codec output the suite pins, written by pin.luau.
+-- The digest of each codec output the suite pins, written by pin.jsl.
 return {
   ['lz4Compress 0 bytes of noise'] = '2d3adedff11b61f1',
   ['rawStoredDeflate 0 bytes of noise'] = '21e65ba842ad6a13',
