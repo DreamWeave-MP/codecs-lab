@@ -1,0 +1,16 @@
+manifest_version = 1
+
+[package]
+id = "org.dreamweave.codecs-lab"
+version = "0.1.0"
+jess_api = "1"
+include = ["src", "README.md"]
+tests = []
+
+[modules]
+"@dream/codecs-lab" = "src/init.luau"
+
+[[layer]]
+id = "org.dreamweave.codecs-lab"
+requires = []
+exports = ["@dream/codecs-lab"]

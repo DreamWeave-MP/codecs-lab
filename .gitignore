@@ -1,0 +1,3 @@
+# Packed output and local work data.
+*.jpk
+/target/
