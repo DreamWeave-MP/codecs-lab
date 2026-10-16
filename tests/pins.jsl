@@ -1,6 +1,6 @@
 --!strict
 -- The digest of each codec output the suite pins, written by pin.jsl.
-return {
+local Pins: { [string]: string } = {
   ['lz4Compress 0 bytes of noise'] = '2d3adedff11b61f1',
   ['rawStoredDeflate 0 bytes of noise'] = '21e65ba842ad6a13',
   ['zlibStoredDeflate 0 bytes of noise'] = '97ae6df662a5b090',
@@ -113,3 +113,5 @@ return {
   ['rawStoredDeflate 70000 zero bytes'] = 'af90dd4e44238e5f',
   ['zlibStoredDeflate 70000 zero bytes'] = '2637122d2d48baa0',
 }
+
+return Pins

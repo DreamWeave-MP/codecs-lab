@@ -7,7 +7,7 @@ local inputs = require './inputs'
 
 print '--!strict'
 print '-- The digest of each codec output the suite pins, written by pin.jsl.'
-print 'return {'
+print 'local Pins: { [string]: string } = {'
 
 for _, input in inputs.all() do
   print(`  ['lz4Compress {input.name}'] = '{inputs.digest(codecs.lz4Compress(input.data))}',`)
@@ -16,3 +16,5 @@ for _, input in inputs.all() do
 end
 
 print '}'
+print ''
+print 'return Pins'
