@@ -1,0 +1,49 @@
+{
+  "schema_version": "3",
+  "document": "lock",
+  "project": "d680cff4-488c-4670-a957-a02fa177b21b",
+  "note": "Written by CI when a release tag is pushed: what each published release's archive contains. Do not edit.",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "locked_from": "580f2472f773426cc167ab34a746b7a02970451c",
+      "artifacts": [
+        {
+          "id": "jpk",
+          "format": "jpk",
+          "filename": "org.dreamweave.codecs-lab-0.1.0.jpk",
+          "media_type": "application/vnd.jess.jpk",
+          "size": 11958,
+          "digests": {
+            "sha256": "a67b3edfbc88fdc90956f2db75be533c7b9109ca621c2c812d56d2d9d224e8f8"
+          },
+          "jess": {
+            "package": "org.dreamweave.codecs-lab",
+            "jess_api": "1",
+            "content_digest": "3c308cf433b31338bb4f21ff98d36910cad4b26b9eca45c630ec1fd9152160a0",
+            "dependencies": {}
+          }
+        }
+      ],
+      "runtimes": {},
+      "platforms": [],
+      "provides": [],
+      "relationships": [],
+      "components": [
+        {
+          "id": "main",
+          "name": "codecs-lab",
+          "path": ".",
+          "required": true,
+          "default": true,
+          "requires": [],
+          "conflicts": [],
+          "suggested_with": []
+        }
+      ],
+      "groups": [],
+      "extensions": {},
+      "critical_extensions": []
+    }
+  ]
+}
